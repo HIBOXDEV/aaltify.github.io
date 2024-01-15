@@ -1,0 +1,59 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="/stylesheet/style.css">
+    <title>Altify</title>
+</head>
+<body>
+    <nav>
+           <div class="logo-wrapper">
+              <img  class="logo"src="/images/logo.png" class="logo">
+              <span class="logo-text" > <a href="/succes">Altify</a></span>
+           </div>
+
+           <div class="nav-links">
+            <a href="/succes/services">Services</a>
+            <a href="https://discord.gg/altify">Discord</a>
+            <a href="https://www.freeprivacypolicy.com/live/58b638b4-52d9-4fa7-893f-afae4262fcf0">Legal</a>
+           </div>
+            <%- include("components/avatar") %>
+    </nav>
+   
+    <div class="discord-service-wrapper">
+        <div class="dicord-basic">
+            <span id="discord-text">Discord</span>
+            <span id="nitro-text">Nitro Basic</span>
+            <span id="nitro-monthly">Monthly</span>
+            <span id="nitro-price">2€</span>
+            <button id="nitro-btn"><a href="https://buy.stripe.com/3csfZJ5qN7rZaYg6op">Buy</a></button>
+
+
+        </div>
+        
+    </div>
+    
+   <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const logoutLink = document.getElementById("logout-link");
+    const avatarContainer = document.querySelector(".avatar");
+
+    document.getElementById("user-name").addEventListener("mouseenter", function () {
+        logoutLink.style.display = "block";
+    });
+
+    document.addEventListener("click", function (event) {
+        // Comprueba si el clic fue fuera del contenedor de avatar y oculta el enlace si es necesario
+        if (!avatarContainer.contains(event.target)) {
+            logoutLink.style.display = "none";
+        }
+    });
+});
+   </script>
+</body>
+</html>

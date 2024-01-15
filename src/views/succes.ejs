@@ -1,0 +1,70 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="/stylesheet/style.css">
+    <title>Altify</title>
+</head>
+<body>
+    <nav>
+           <div class="logo-wrapper">
+              <img  class="logo"src="/images/logo.png" class="logo">
+              <span class="logo-text" > <a href="/succes">Altify</a></span>
+           </div>
+
+           <div class="nav-links">
+            <a href="/succes/services">Services</a>
+            <a href="https://discord.gg/altify">Discord</a>
+            <a href="https://www.freeprivacypolicy.com/live/58b638b4-52d9-4fa7-893f-afae4262fcf0">Legal</a>
+           </div>
+
+           
+            <%- include("components/avatar") %>
+           
+    </nav>
+   
+    <div class="hero-wrapper">
+
+        <div class="first-hero">
+         <div class="hero-text-wrapper">
+            <h1>Welcome to Altify</h1>
+            <p> At Altify, we not only provide you various services cheaper than anywhere else,<br> we also sell methods that we use, <br>so you can either buy everything yourself or open a service of your own!</p>
+         </div>
+         <div class="hero-btn-wrapper">
+            <button class="lgn-btnn"><a href="/succes/services">Services</a></button>
+            <button class="dark-btn"><a href="https://discord.gg/altify">Discord Server</a></button>
+         </div>
+        </div>
+          
+        <div class="hero-images">
+            
+            <img src="/images/heroimage.png" >
+        </div>
+    
+        </div>
+       
+    
+   <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const logoutLink = document.getElementById("logout-link");
+    const avatarContainer = document.querySelector(".avatar");
+
+    document.getElementById("user-name").addEventListener("mouseenter", function () {
+        logoutLink.style.display = "block";
+    });
+
+    document.addEventListener("click", function (event) {
+        // Comprueba si el clic fue fuera del contenedor de avatar y oculta el enlace si es necesario
+        if (!avatarContainer.contains(event.target)) {
+            logoutLink.style.display = "none";
+        }
+    });
+});
+   </script>
+</body>
+</html>
